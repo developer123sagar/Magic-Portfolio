@@ -1,7 +1,12 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 import BorderMagicButton from "./ui/border-magic-button";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { HiDownload } from "react-icons/hi";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -26,28 +31,84 @@ const Hero = () => {
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex_center">
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "tween",
+              duration: 0.2,
+            }}
+          >
+            <Image
+              src="/profile.png"
+              alt="Sagar Chand"
+              width="192"
+              height="192"
+              quality="95"
+              priority={true}
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+            />
+          </motion.div>
+
+          <motion.span
+            className="absolute bottom-0 right-0 text-4xl"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 125,
+              delay: 0.1,
+              duration: 0.7,
+            }}
+          >
+            👋
+          </motion.span>
+        </div>
+      </div>
+      <div className="flex justify-center relative mb-20 mt-5 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
-          </p>
+          <motion.h1
+            className="text-center md:tracking-wider mb-4 text-sm md:text-lg text-white"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span className="font-medium">Hi, I'm Sagar Chand.</span> I'm a{" "}
+            <span className="font-medium">Frontend developer</span> with{" "}
+            <span className="font-medium">3 years</span> of experience. I enjoy
+            building <span className="italic">web apps</span>. My focus is{" "}
+            <span className="underline">React (Next.js)</span>
+          </motion.h1>
 
           <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg text-white">
-            Hi! I&apos;m Sagar Chand, a Frontend Developer.
-          </p>
-
-          <a href="#about">
-            <BorderMagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 px-4 text-lg font-medium w-full"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.1,
+            }}
+          >
+            <a href="#about">
+              <BorderMagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a href="/CV.pdf" download>
+              <BorderMagicButton
+                title="Download CV"
+                icon={<HiDownload />}
+                position="right"
+              />
+            </a>
+          </motion.div>
         </div>
       </div>
     </main>
