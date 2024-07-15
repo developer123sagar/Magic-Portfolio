@@ -74,7 +74,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="font-medium">Hi, I'm Sagar Chand.</span> I'm a{" "}
+            <span className="font-medium">Hi, I&apos;m Sagar Chand.</span> I&apos;m a{" "}
             <span className="font-medium">Frontend developer</span> with{" "}
             <span className="font-medium">3 years</span> of experience. I enjoy
             building <span className="italic">web apps</span>. My focus is{" "}
