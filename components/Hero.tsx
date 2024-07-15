@@ -5,7 +5,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
   return (
-    <div className="pt-36 pb-20 w-screen h-screen">
+    <main className="pt-36 pb-24">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -50,7 +50,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
