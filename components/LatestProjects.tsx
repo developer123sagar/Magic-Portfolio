@@ -16,10 +16,7 @@ const LatestProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
-            <PinContainer
-              title={item.link}
-              href={item.link}
-            >
+            <PinContainer title={item.link} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -32,7 +29,7 @@ const LatestProjects = () => {
                   alt="cover"
                   width={200}
                   height={200}
-                  className="z-10 absolute bottom-0 w-[90%] rotate-[4deg]"
+                  className="z-10 absolute bottom-0 w-[80%] sm:w-[90%] rotate-3 sm:rotate-[4deg]"
                 />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
