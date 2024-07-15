@@ -21,7 +21,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 dark:bg-black-100",
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -72,6 +72,24 @@ export const BentoGridItem = ({
     <div
       className={cn(
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input justify-between flex flex-col space-y-4",
+        {
+          "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]": id === 1,
+        },
+        {
+          "lg:col-span-2 md:col-span-3 md:row-span-2": id === 2,
+        },
+        {
+          "lg:col-span-2 md:col-span-3 md:row-span-2": id === 3,
+        },
+        {
+          "lg:col-span-2 md:col-span-3 md:row-span-1": id === 4,
+        },
+        {
+          "md:col-span-3 md:row-span-2": id === 5,
+        },
+        {
+          "lg:col-span-2 md:col-span-3 md:row-span-1": id === 6,
+        },
         className
       )}
       style={{
@@ -88,7 +106,7 @@ export const BentoGridItem = ({
               alt={img}
               width={220}
               height={220}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
         </div>
