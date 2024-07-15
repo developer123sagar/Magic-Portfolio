@@ -7,7 +7,6 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10 relative" id="contact">
-      {/* background grid */}
       <div className="w-full h-full absolute left-0 bottom-0">
         <Image
           width={100}
