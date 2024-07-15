@@ -194,8 +194,8 @@ export const BentoGridItem = ({
                 }`}
               >
                 <Image
-                  width={220}
-                  height={220}
+                  width={100}
+                  height={100}
                   src="/confetti.gif"
                   alt="confetti"
                 />
