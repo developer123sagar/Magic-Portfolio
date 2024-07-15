@@ -86,7 +86,7 @@ export const projects = [
     title: "Moviehub",
     des: "Developed a dynamic movie catalog web application using React, Tailwind CSS, and the TMDB API. Implemented CRUD (Create, Read, Update, Delete) operations utilizing Firebase for seamless user interaction. Users can add movies in favourite section and there is authetication using firebase.",
     img: "/p3.png",
-    iconLists: ["/re.svg", "/tail.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     link: "https://moviehub-sand.vercel.app/",
   },
   {
@@ -193,13 +193,11 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/developer123sagar"
   },
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/sagar-chand/"
   },
 ];
