@@ -91,9 +91,17 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Twittee",
+    des: "A full stack social media web app like Twitter(X) using Nextjs 15, React 19, Tanstack Query and many more.",
+    img: "/p4.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg"],
+    link: "https://twittee.vercel.app/",
+  },
+  {
+    id: 5,
     title: "AI Podcastr - Saas Application",
     des: "A unique Software-as-a-Service app with AI-powered features like text-to-multiple-voices functionality and AI-generated images with Next.js 14 and Convex.",
-    img: "/p4.png",
+    img: "/p5.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://podcastr-saggu.vercel.app/",
   },
