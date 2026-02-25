@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import BorderMagicButton from "./ui/border-magic-button";
+import { RESUME_PDF } from "@/constants";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { HiDownload } from "react-icons/hi";
@@ -74,10 +75,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="font-medium">Hi, I&apos;m Sagar Chand.</span> I&apos;m a{" "}
-            <span className="font-medium">Frontend developer</span> with{" "}
-            <span className="font-medium">3 years</span> of experience. I enjoy
-            building <span className="italic">web apps</span>. My focus is{" "}
+            <span className="font-medium">Hi, I&apos;m Sagar Chand.</span>{" "}
+            I&apos;m a <span className="font-medium">Frontend developer</span>{" "}
+            with <span className="font-medium">4 years</span> of experience. I
+            enjoy building <span className="italic">web apps</span>. My focus is{" "}
             <span className="underline">React (Next.js)</span>
           </motion.h1>
 
@@ -101,7 +102,7 @@ const Hero = () => {
                 position="right"
               />
             </a>
-            <a href="/CV.pdf" download>
+            <a href={RESUME_PDF} download="Sagar-Chand-Resume.pdf">
               <BorderMagicButton
                 title="Download CV"
                 icon={<HiDownload />}
