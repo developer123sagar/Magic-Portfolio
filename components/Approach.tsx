@@ -12,11 +12,9 @@ const Approach = () => {
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          title="Collaborate & Understand"
+          icon={<AceternityIcon order="Step 1" />}
+          des="I work closely with backend, design & stakeholders. We align on goals, UX, and technical scope—ensuring nothing gets lost in translation."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -24,11 +22,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          title="Build with Quality"
+          icon={<AceternityIcon order="Step 2" />}
+          des="I focus on clean, maintainable code & timely delivery. I mentor teams on React best practices, Git workflow & performance."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -41,11 +37,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title="Ship & Iterate"
+          icon={<AceternityIcon order="Step 3" />}
+          des="I deliver responsive, user-friendly interfaces that scale. From geospatial apps to e-commerce—prioritizing seamless UX & maintainability."
         >
           <CanvasRevealEffect
             animationSpeed={3}
