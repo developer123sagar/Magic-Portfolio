@@ -10,7 +10,16 @@ const Experience = () => {
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
+        {workExperience.map((card) => {
+          const typedCard = card as {
+            period?: string;
+            location?: string;
+            desc: string;
+            title: string;
+            thumbnail: string;
+            id: number;
+          };
+          return (
           <Button
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
@@ -29,17 +38,24 @@ const Experience = () => {
                 alt={card.thumbnail}
                 className="lg:w-32 md:w-20 w-16"
               />
-              <div className="lg:ms-5">
+              <div className="lg:ms-5 flex-1">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
+                  {typedCard.title}
                 </h1>
+                {typedCard.period && (
+                  <p className="text-start text-purple/90 text-sm mt-1 font-medium">
+                    {typedCard.period}
+                    {typedCard.location ? ` • ${typedCard.location}` : ""}
+                  </p>
+                )}
                 <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
+                  {typedCard.desc}
                 </p>
               </div>
             </div>
           </Button>
-        ))}
+        );
+        })}
       </div>
     </section>
   );
